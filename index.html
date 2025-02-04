@@ -15,6 +15,7 @@
     <title>Car Rental Landing Page</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <nav>
         <div class="nav__header">
@@ -75,6 +76,79 @@
         </div>
       </div>
     </header>
+    <!-- END OF HEADER -->
+
+    <!-- FORM SECTION -->
+    <section class="header__form">
+      <form action="/">
+        <div class="input__group">
+          <label for="location">Pick up & Return location</label>
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Dallas, Texas"
+          />
+        </div>
+        <div class="input__group">
+          <label for="start">Pick up date</label>
+          <input
+            type="text"
+            name="start"
+            id="start"
+            placeholder="Aug 16, 10:00 AM"
+          />
+        </div>
+        <div class="input__group">
+          <label for="stop">Return date</label>
+          <input
+            type="text"
+            name="stop"
+            id="stop"
+            placeholder="Aug 18, 10:00 PM"
+          />
+        </div>
+        <button class="btn">Search <i class="ri-search-line"></i></button>
+      </form>
+    </section>
+    <!-- END OF FORM SECTION -->
+
+    <!-- ABOUT SECTION -->
+    <section class="section__container about__container" id="about">
+      <h2 class="section__header">How it works</h2>
+      <p class="section__description">
+        Renting a car with us is simple! Choose your vehicle, pick your dates,
+        and complete your booking. We'll handle the rest, ensuring a smooth
+        start to your journey.
+      </p>
+      <div class="about__grid">
+       <div class="about__card">
+          <span><i class="ri-map-pin-2-fill"></i></span>
+          <h3>Choose Location</h3>
+          <p>
+            Select from a variety of pick-up locations that best suit your
+            needs, whether it's close to home, work, or airport.
+          </p>
+        </div>
+        <div class="about__card">
+          <span><i class="ri-calendar-event-fill"></i></span>
+          <h3>Pick-up Date</h3>
+          <p>
+            Choose the exact date and time for your car pick-up, ensuring that
+            your vehicle is ready when you need it.
+          </p>
+        </div>
+        <div class="about__card">
+          <span><i class="ri-roadster-fill"></i></span>
+          <h3>Book your Car</h3>
+          <p>
+            Complete your booking with just a few clicks, and we'll prepare your
+            vehicle to ensure a hassle-free pick-up.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- END OF ABOUT SECTION -->
 
     <!-- JavaScript -->
     <script src="https://unpkg.com/scrollreveal"></script>

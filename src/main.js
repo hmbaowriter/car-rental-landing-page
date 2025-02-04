@@ -38,3 +38,13 @@ ScrollReveal().reveal(".header__content .section__description", {
   ...scrollRevealOption,
   delay: 1500,
 });
+
+ScrollReveal().reveal(".header__form form", {
+  ...scrollRevealOption,
+  delay: 2000,
+});
+
+ScrollReveal().reveal(".about__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
