@@ -1,6 +1,7 @@
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
+const tabs = document.querySelector(".deals__tabs");
 
 // toggle menu
 menuBtn.addEventListener("click", (e) => {
@@ -16,6 +17,7 @@ navLinks.addEventListener("click", (e) => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
+// Add opening animations
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
@@ -47,4 +49,26 @@ ScrollReveal().reveal(".header__form form", {
 ScrollReveal().reveal(".about__card", {
   ...scrollRevealOption,
   interval: 500,
+});
+
+// Change tab data
+console.log(tabs.children);
+tabs.addEventListener("click", (e) => {
+  const tabContents = document.querySelectorAll(
+    ".deals__container .tab__content"
+  );
+  Array.from(tabs.children).forEach((item) => {
+    if (item.dataset.id == e.target.dataset.id) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+  tabContents.forEach((item) => {
+    if (item.id === e.target.dataset.id) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
 });

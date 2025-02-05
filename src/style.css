@@ -311,9 +311,139 @@ nav {
 }
 /* END OF ABOUT SECTION STYLES */
 
+/* DEALS SECTION STYLES */
+.deals {
+  background-color: var(--extra-light);
+}
+
+.deals__container .section__description {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.deals__tabs {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.deals__tabs .btn {
+  font-weight: 600;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+}
+
+.deals__tabs .btn.active {
+  color: var(--white);
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.deals__container .tab__content {
+  display: none;
+  gap: 1rem;
+  animation: fadeEffect 1s;
+}
+
+.deals__container .tab__content.active {
+  display: grid;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.deals__card {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.deals__card img {
+  margin-bottom: 1rem;
+}
+
+.deals__rating {
+  margin-bottom: 1rem;
+  color: goldenrod;
+}
+
+.deals__rating span:last-child {
+  color: var(--text-light);
+}
+
+.deals__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.deals__card__grid {
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.deals__card__grid div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-light);
+}
+
+.deals__card__grid div span {
+  font-size: 1.2rem;
+}
+
+.deals__card__footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.deals__card__footer h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.deals__card__footer h3 span {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.deals__card__footer a {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.deals__card__footer a:hover {
+  color: var(--primary-color-dark);
+}
+/* END OF DEALS SECTION STYLES */
+
 /* RESPONSIVE */
 @media (width > 540px) {
   .about__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .deals__container .tab__content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -430,6 +560,10 @@ nav {
   }
 
   .about__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .deals__container .tab__content {
     grid-template-columns: repeat(3, 1fr);
   }
 }
