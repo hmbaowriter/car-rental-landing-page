@@ -51,6 +51,41 @@ ScrollReveal().reveal(".about__card", {
   interval: 500,
 });
 
+ScrollReveal().reveal(".choose__image img", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+ScrollReveal().reveal(".choose__content .section__header", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".choose__content .section__description", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+ScrollReveal().reveal(".choose__card", {
+  duration: 1000,
+  delay: 1500,
+  interval: 500,
+});
+
+ScrollReveal().reveal(".subscribe__image img", {
+  ...scrollRevealOption,
+  origin: "right",
+});
+ScrollReveal().reveal(".subscribe__content .section__header", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".subscribe__content .section__description", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+ScrollReveal().reveal(".subscribe__content form", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
 // Change tab data
 console.log(tabs.children);
 tabs.addEventListener("click", (e) => {
@@ -71,4 +106,14 @@ tabs.addEventListener("click", (e) => {
       item.classList.remove("active");
     }
   });
+});
+
+const swiper = new Swiper(".swiper", {
+  speed: 500,
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3000
+  }
 });
